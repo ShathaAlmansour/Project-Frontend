@@ -34,7 +34,7 @@ const Login = () => {
     if (ckeck) {
       try {
         localStorage.setItem("newUser", JSON.stringify({ email }));
-        navigate("/home");
+        navigate("/Skin");
       } catch (error) {
         console.log("error ", error);
       }
