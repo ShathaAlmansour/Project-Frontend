@@ -1,0 +1,68 @@
+* {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+  }
+
+  .contener {
+    width: 100%;
+    background-image: url(https://i.pinimg.com/564x/1d/4b/36/1d4b36ed161c892f7556dd8bc8424231.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+  }
+  
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 420px;
+    /* background: rgba(188, 216, 28, 0.76); */
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+  h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 30px;
+    /* background:rgba(65, 65, 65, 0.5) ; */
+  }
+  input[type="email"],
+  [type="password"] {
+    position: absolute;
+    outline: none;
+    border: none;
+    width: 250px;
+    height: 35px;
+    border-bottom: 2px solid red;
+    background: none;
+    padding: 5px;
+    color: #fff;
+    left: 50px;
+  }
+  input[value="Login"] {
+    position: absolute;
+    top: 190px;
+    left: 110px;
+    width: 130px;
+    height: 40px;
+    background: red;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  input[value="Login"]:hover {
+    background: #fff;
+    color: red;
+  }
+  p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 90px;
+    /* background:rgba(41, 38, 38, 0.5) ; */
+  }

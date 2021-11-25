@@ -1,0 +1,35 @@
+* {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .mainwrapper{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-row-gap: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-top: 100px;
+    border-radius: 30%;
+    
+   
+    
+    
+  }
+  .full {
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+  }
+  
+  #imag{
+    width: 100%;
+  }
+  #but{
+    margin-top: 5%;
+  }
+  
