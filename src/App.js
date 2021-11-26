@@ -1,14 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import axios from "axios";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import Hair from "./components/Hair";
 import Skin from "./components/Skin";
 import Shop from "./components/ShoppingBasket";
-import Nav from "./components/Nav";
 
 
 function App() {

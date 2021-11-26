@@ -1,8 +1,9 @@
 import React from "react";
 import Nav from "../Nav/index";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router";
+import {useNavigate} from "react-router";
 import axios from "axios";
+import Swal from "sweetalert2";
 import "./style.css";
 import { BsFillCartFill } from "react-icons/bs";
 
@@ -10,12 +11,14 @@ const Hair = () => {
   const navigate = useNavigate();
   const [weapn, setWeapn] = useState([]);
   const [local, setLocal] = useState("");
+  const [email, setEmail] = useState("");
   const [remAdd, setRemAdd] = useState([]);
 
 
   const getweapon = async () => {
     const display = await axios.get("http://localhost:4000/product");
     console.log(display);
+     // eslint-disable-next-line 
     setWeapn(display.data.filter((item) => item.kind == "hair"));
   };
   useEffect(() => {
@@ -26,12 +29,31 @@ const Hair = () => {
     setLocal(item);
   };
   useEffect(() => {
-    if (JSON.parse(localStorage.getItem("newUser"))) {
-      getDataEmail();
+    if (localStorage.getItem("newUser"))
+        setEmail(localStorage.getItem("newUser"));
+    else {
+        Swal.fire({
+            title: "To view the site, please login!",
+            text: "After pressing ok, you will be directed to login",
+            icon: "question",
+            didClose: () => {
+              navigate("/login");
+               
+            },
+        });
     }
+
     getLocalStorage();
+
     // eslint-disable-next-line
   }, []);
+  // useEffect(() => {
+  //   if (JSON.parse(localStorage.getItem("newUser"))) {
+  //     getDataEmail();
+  //   }
+  //   getLocalStorage();
+  //   // eslint-disable-next-line
+  // }, []);
   const getDataEmail = async () => {
     const user = JSON.parse(localStorage.getItem("newUser"));
     const item = await axios.get(
@@ -72,32 +94,32 @@ const Hair = () => {
     // test1();
   }, [remAdd]);
 
-  const kick = () => {
-    localStorage.clear();
-    navigate("/home");
-  };
+ 
   return (
     <>
       <Nav />
       <div className="mainwrapper">
-        {weapn.map((item) => {
-          return (
-            <div className="full">
-              <img src={item.img} id="imag" />
-              <h5>{item.name}</h5>
-              <h6>{item.descrapion}</h6>
-              <h6>{item.price}</h6>
-              <button
-                onClick={() => {
-                  removeOrAdd(item._id);
-                }}
-              >
-                <BsFillCartFill />
-              </button>
-              {/* <button className="but"> <BsFillCartFill /> </button> */}
-            </div>
-          );
-        })}{" "}
+        {email ? (
+          <>
+            {weapn.map((item) => {
+              return (
+                <div className="full">
+                  <img src={item.img} id="imag" alt="#" />
+                  <h4>{item.name}</h4>
+                  <h6>{item.descrapion}</h6>
+                  <h5>{item.price}</h5>
+                  <button
+                    onClick={() => {
+                      removeOrAdd(item._id);
+                    }}
+                  >
+                    <BsFillCartFill />
+                  </button>
+                </div>
+              );
+            })}
+          </>
+         ) : ("")} 
       </div>
     </>
   );

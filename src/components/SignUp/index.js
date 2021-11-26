@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../Nav/index";
+import Swal from "sweetalert2";
 import axios from "axios";
 import "./style.css";
 export default class Signup extends Component {
@@ -10,6 +11,7 @@ export default class Signup extends Component {
       email: "",
       password: "",
     };
+
     this.changeUserName = this.changeUserName.bind(this);
     this.changeEmail = this.changeEmail.bind(this);
     this.changePassword = this.changePassword.bind(this);
@@ -52,9 +54,14 @@ export default class Signup extends Component {
         email: "",
         password: "",
       });
-    } else window.alert("fill all fields");
+   }   else Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: `Don't have acunot!`,
+    // footer: '<a href="login">تأكد من حساب?</a>'
+  })
   }
-
+  
   render() {
     return (
       <>
@@ -98,7 +105,7 @@ export default class Signup extends Component {
                   className="btn btn-danger btn-block"
                   value="Register"
                 />
-                <p id="paragraph">Do you have account </p>
+               
               </form>
             </div>
           </div>

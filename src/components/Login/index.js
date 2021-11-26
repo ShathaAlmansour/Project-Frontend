@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../Nav/index";
 import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
 import { useState, useEffect } from "react";
 import "./style.css";
 import axios from "axios";
@@ -24,6 +25,7 @@ const Login = () => {
     e.preventDefault();
     let ckeck = false;
 
+     // eslint-disable-next-line
     users.map((item) => {
       console.log(item.email);
       console.log(item.password);
@@ -39,7 +41,16 @@ const Login = () => {
         console.log("error ", error);
       }
     } else {
-      let myWindow = window.alert("Email is wrong or password ");
+       // eslint-disable-next-line
+      // let myWindow = window.alert("Email is wrong or password ");
+     
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'email or name error!',
+        footer: '<a href="login">تأكد من حساب?</a>'
+      })
+      
     }
   };
   return (
