@@ -57,8 +57,8 @@ export default class Signup extends Component {
    }   else Swal.fire({
     icon: 'error',
     title: 'Oops...',
-    text: `Don't have acunot!`,
-    // footer: '<a href="login">تأكد من حساب?</a>'
+    text: `Don't have account!`,
+    
   })
   }
   

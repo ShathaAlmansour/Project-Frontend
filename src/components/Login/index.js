@@ -47,8 +47,8 @@ const Login = () => {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'email or name error!',
-        footer: '<a href="login">تأكد من حساب?</a>'
+        text: 'Email or Name error!',
+        footer: '<a href="login">Check your account</a>'
       })
       
     }

@@ -6,11 +6,11 @@
 
   .contener {
     width: 100%;
-    background-image: url(https://i.pinimg.com/564x/1d/4b/36/1d4b36ed161c892f7556dd8bc8424231.jpg);
+    background-image: url(https://i.pinimg.com/736x/ff/2d/53/ff2d531cf815e87dcdef2ac0d3a71927.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+   
   }
   
   form {
@@ -63,6 +63,6 @@
   p {
     color: rgb(255, 255, 255);
     text-align: center;
-    margin-top: 90px;
+    /* margin-top: 90px; */
     /* background:rgba(41, 38, 38, 0.5) ; */
   }

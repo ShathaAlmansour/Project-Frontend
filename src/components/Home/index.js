@@ -11,27 +11,23 @@ const Home = () => {
     Navigate("/signUp");
   };
   return (
-    <>
-      <div className="contenerr">
-        <div className="row">
+      <div className="homeContenerr">
+        <div className="home">
+          <p className="homeP"> Skin purity and hair care reflect our essence </p>
           <form className="start">
             <input
               onClick={login}
               type="submit"
-              className="btn btn-danger btn-block"
               value="Login"
             />
             <input
               onClick={signUp}
               type="submit"
-              className="btn btn-danger btn-block"
               value="Register"
             />
           </form>
-          <div></div>
         </div>
       </div>
-    </>
   );
 };
 export default Home;
