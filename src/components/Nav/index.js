@@ -24,7 +24,7 @@ const Nav = () => {
           </NavLink>
         </div>
         <div className="icons">
-          <NavLink to="/login" className="lo">
+          <NavLink to="/login" className="sh">
             <AiOutlineLogin />
           </NavLink>
           <NavLink to="/shop" className="sh">

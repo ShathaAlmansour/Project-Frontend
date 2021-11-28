@@ -55,12 +55,12 @@ const Shop = () => {
                   <h4>{item.name}</h4>
                   <h4>{item.price}</h4>
                   <h4>{item.kind}</h4>
-                  <button
+                  <button className="slah"
                     onClick={() => {
                       removeFavorite(item._id);
                     }}
                   >
-                    Remove To Cart
+                    Remove 
                   </button>
                 </div>
               );

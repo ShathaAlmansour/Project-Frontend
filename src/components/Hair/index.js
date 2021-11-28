@@ -108,7 +108,7 @@ const Hair = () => {
                   <h4>{item.name}</h4>
                   <h6>{item.descrapion}</h6>
                   <h5>{item.price}</h5>
-                  <button
+                  <button className="slah"
                     onClick={() => {
                       removeOrAdd(item._id);
                     }}

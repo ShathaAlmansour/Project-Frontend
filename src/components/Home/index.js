@@ -16,7 +16,7 @@ const Home = () => {
   return (
       <div className="home-container">
         <div className="home-box">
-         <p> Skin purity & hair care </p>
+         <p> Skin purity and hair care reflect our essence </p>
           <div className="btn-box">
          <Link to="/login">Login</Link>
          <Link to="/signUp">SignUp</Link>
