@@ -3,6 +3,8 @@ import Nav from "../Nav/index";
 import Swal from "sweetalert2";
 import axios from "axios";
 import "./style.css";
+import { Link } from "react-router-dom";
+
 export default class Signup extends Component {
   constructor() {
     super();
@@ -64,53 +66,42 @@ export default class Signup extends Component {
   
   render() {
     return (
-      <>
-        <Nav />
-        <div>
-          <div className="contener">
-            <div className="formDiv">
-              <form onSubmit={this.submitSignUp}>
-                <h2>SignUp</h2>
-                <br />
+        <div className="login-container">
+          <div className="form-container">
+                <h1>SignUp</h1>
+              <form onSubmit={this.submitSignUp} className="form-box">
                 <input
                   type="text"
                   placeholder="User Name"
                   onChange={this.changeUserName}
                   value={this.state.name}
-                  className="form-control form-group"
+                  className="form-input"
                 />
-                <br />
-                <br />
-                <br />
-
+ 
                 <input
                   type="email"
                   placeholder="Email"
                   onChange={this.changeEmail}
                   value={this.state.email}
-                  className="form-control form-group"
+                  className="form-input"
                 />
-                <br />
-                <br />
-                <br />
+
                 <input
                   type="password"
                   placeholder="Password"
                   onChange={this.changePassword}
                   value={this.state.password}
-                  className="form-control form-group"
+                  className="form-input"
                 />
                 <input
                   type="submit"
-                  className="btn btn-danger btn-block"
+                  className="form-btn"
                   value="Register"
                 />
-               
               </form>
+              <Link to="/login">Do you have an account ?</Link>
             </div>
           </div>
-        </div>
-      </>
     );
   }
 }

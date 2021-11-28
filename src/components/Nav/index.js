@@ -1,9 +1,10 @@
-import React from "react";
 import "./style.css";
 import { useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
-import { BsFillCartFill } from "react-icons/bs";
-import { IoLogIn, IoLogOut } from "react-icons/io5";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { RiLogoutCircleLine } from "react-icons/ri";
+import { AiOutlineLogin } from "react-icons/ai";
+import { BiUserCircle } from "react-icons/bi";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -12,27 +13,29 @@ const Nav = () => {
     navigate("/SignUp");
   };
   return (
-    <>
-      <div className="wrapper">
-        <div className="navMenu">
-          <NavLink to="/hair" className="links">
+    <div className="wrapper">
+      <div className="navMenu">
+        <div className="nav-items">
+          <NavLink to="/hair" className="Care">
             Hair Care
           </NavLink>
-          <NavLink to="/skin" className="links">
-              Skin Care
+          <NavLink to="/skin" className="Care">
+            Skin Care
           </NavLink>
-          <NavLink to="/login" className="links">
-            <IoLogIn/>
+        </div>
+        <div className="icons">
+          <NavLink to="/login" className="lo">
+            <AiOutlineLogin />
           </NavLink>
-          <NavLink to="/shop" className="links">
-            <BsFillCartFill />
+          <NavLink to="/shop" className="sh">
+            <MdOutlineShoppingCart />
           </NavLink>
-          <NavLink to="/" onClick={kick} className="links">
-            <IoLogOut />
+          <NavLink to="/Profile" className="sh">
+            <BiUserCircle />
           </NavLink>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Nav;

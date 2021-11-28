@@ -1,9 +1,12 @@
 import React from "react";
 import "./style.css";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
   const Navigate = useNavigate();
+  if(localStorage.getItem("newUser"))  Navigate("/skin");
   const login = () => {
     Navigate("/login");
   };
@@ -11,21 +14,13 @@ const Home = () => {
     Navigate("/signUp");
   };
   return (
-      <div className="homeContenerr">
-        <div className="home">
-          <p className="homeP"> Skin purity and hair care reflect our essence </p>
-          <form className="start">
-            <input
-              onClick={login}
-              type="submit"
-              value="Login"
-            />
-            <input
-              onClick={signUp}
-              type="submit"
-              value="Register"
-            />
-          </form>
+      <div className="home-container">
+        <div className="home-box">
+         <p> Skin purity & hair care </p>
+          <div className="btn-box">
+         <Link to="/login">Login</Link>
+         <Link to="/signUp">SignUp</Link>
+         </div>
         </div>
       </div>
   );

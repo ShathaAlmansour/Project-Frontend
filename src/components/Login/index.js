@@ -1,10 +1,12 @@
-import React from "react";
+import {React} from "react";
 import Nav from "../Nav/index";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { useState, useEffect } from "react";
 import "./style.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 const Login = () => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
@@ -41,9 +43,7 @@ const Login = () => {
         console.log("error ", error);
       }
     } else {
-       // eslint-disable-next-line
-      // let myWindow = window.alert("Email is wrong or password ");
-     
+       // eslint-disable-next-line 
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -54,45 +54,32 @@ const Login = () => {
     }
   };
   return (
-    <>
-      <Nav />
-      <div>
-        <div className="contener">
-          <div className="formDiv">
-            <form onSubmit={submitlogin}>
-              <h2>Login</h2>
-              <br />
-              <br />
+    <div className="login-container">
+          <div className="form-container">
+              <h1>Login</h1>
+            <form onSubmit={submitlogin} className="form-box">
               <input
                 type="email"
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
-                className="form-control form-group"
+                className="form-input"
               />
-              <br />
-              <br />
-              <br />
               <input
                 type="password"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
-                className="form-control form-group"
+                className="form-input"
               />
               <input
                 type="submit"
-                className="btn btn-danger btn-block"
+                className="form-btn"
                 value="Login"
               />
-              <br />
-              <br />
-              <br />
-              <br />
-              <p onClick={registerPage}>Don't have an account ?</p>
+
             </form>
+            <Link to="/signup">Don't have an account ?</Link>
           </div>
         </div>
-      </div>
-    </>
   );
 };
 export default Login;

@@ -6,10 +6,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "./style.css";
 
-
-
-
-
 const Shop = () => {
   // const navigate = useNavigate();
   const [account, setAccount] = useState([]);
@@ -21,15 +17,12 @@ const Shop = () => {
   };
 
   const getData = async () => {
-    if(local){
+    if (local) {
       const item = await axios.get(
         `http://localhost:4000/users/cart/${local.email}`
       );
       setAccount(item.data);
     }
-   
-    
-    
   };
 
   useEffect(() => {
@@ -51,32 +44,29 @@ const Shop = () => {
   };
   return (
     <>
-    <Nav />
-      <div>
-        {/* <Nav /> */}
-      
-        {account.length > 0 &&
-          account.map((item, i) => {
-            return (
-             
-              <div className="books">
-                <img src={item.img} alt="#" className="img" />
-               
-                <h4>{item.name}</h4>
-                <h4>{item.price}</h4>
-                <h4>{item.kind}</h4>
-                <button
-                  onClick={() => {
-                    removeFavorite(item._id);
-                  }}
-                >
-                  Remove To Cart
-                </button>
-              </div>
-            );
-          })}
-      </div>
-    </>
+      <Nav />
+        <div className="cart-box">
+          {account.length > 0 &&
+            account.map((item, i) => {
+              return (
+                <div className="full">
+                  <img src={item.img} alt="#" id="imag" />
+
+                  <h4>{item.name}</h4>
+                  <h4>{item.price}</h4>
+                  <h4>{item.kind}</h4>
+                  <button
+                    onClick={() => {
+                      removeFavorite(item._id);
+                    }}
+                  >
+                    Remove To Cart
+                  </button>
+                </div>
+              );
+            })}
+        </div>
+        </>
   );
 };
 export default Shop;

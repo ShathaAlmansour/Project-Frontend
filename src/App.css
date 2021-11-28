@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Dance-script";
+  src: url(/src/res/DancingScript-Regular.ttf);
+}
+
+body{
+  font-family: "Dance-script", serif;
+}
 .App {
   text-align: center;
 }
@@ -36,3 +44,4 @@
     transform: rotate(360deg);
   }
 }
+

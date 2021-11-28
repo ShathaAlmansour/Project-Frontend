@@ -1,76 +1,65 @@
-/* body{
-  background-image: url(https://i.pinimg.com/564x/43/05/fd/4305fd3b1cac16ba1de7dcafc21a0aa6.jpg);
-  background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   width: 100%;
-   height: 300px;
-   opacity: 5;
-} */
 
-.home{
-  padding: 20px;
+.home-box {
+  background-color: #FFEEE4;
+  width: 100%;
+  display: flex;
+  gap: 26px;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 26px 0;
+}
+
+.home-box p {
+  font-size: 36px;
+  color: #D39FA0;
+  font-weight: bolder;
+}
+.btn-box{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+.home-box a, .home-box a:active, .home-box a:visited{
+  text-decoration: none;
+  text-decoration-style: none;
+  font: 26px;
+  padding: 12px 16px;
+  background: #FFEEE4;
+  border-radius: 12px;
   width: 50%;
-  height: 50%;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0;left: 0;bottom: 0;right: 0;
-  /* border: solid black; */
- 
-  /* margin-top: 90px; */
-  width: 60%;
-  border-radius: 20px;
-  height: 300px;
-  background-color: rgba(207, 196, 196, 0.7);
+  text-align: center;
+  color: #D39FA0;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: all 300ms;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.315);
 }
-
-.homeP {
-  padding: 20px;
-  font-size: 20px;
-  /* margin-bottom: -20px; */
+.home-box a:hover{
+  transform: scale(1.05);
+  background: #a77879;
+  color: #FFEEE4;
 }
-
 
 .start {
   width: 20%;
   height: auto;
   position: absolute;
-margin-top: -300px;
-margin-left: -50px;
+  margin-top: -200px;
+  margin-left: -100px;
   transform: translate(-50%, -50%);
 }
 
-.homeContenerr {
-  background-image: url(https://i.pinimg.com/564x/bb/37/89/bb3789d934a9e33bd60d8abf81875499.jpg);
+.home-container {
+  background-image: url(https://i.pinimg.com/564x/43/3a/2f/433a2ff2cb2e31ca9d2a15ea9b5d3314.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  }
-  /* .contenerr img {
-    width: 100%;
-  } */
-  /* .head {
-    color: red;
-    position: absolute;
-    top: 10%;
-    right: 25%;
-    width: 100%;
-    text-align: center;
-    font-size: 4rem;
-  } */
-  /* #banner {
-    width: 20%;
-    opacity: 0.4;
-    top: 500%;
-    grid-template-columns: 1fr 1fr;
-    padding: 10px;
-  } */
-  /* .start {
-    margin-left: 500px;
-    top: 290px;
-    /* background-color: rgba(188, 216, 28, 0.76); */
-  
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

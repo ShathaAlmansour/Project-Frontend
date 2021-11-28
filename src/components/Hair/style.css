@@ -10,8 +10,8 @@
         width: 60%;
         height: 420;
         border-radius: 10px;
-        box-shadow: 0px 7px 0px 0px red;
-        border: 1px solid red;
+        box-shadow: 0px 7px 0px 0px #a77879;
+        border: 1px solid #a77879;
         margin-bottom: 3rem;
         display: flex;
         flex-direction: column;
